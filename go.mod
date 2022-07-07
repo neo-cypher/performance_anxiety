@@ -1,4 +1,4 @@
-module github.io/
+module github.com/storj-antonio/performance_anxiety
 
 go 1.18
 
