@@ -15,7 +15,12 @@ const (
 	myAccessGrant = "1T4nEymKBctvv2pBXbqhiAqMkirmRZbpQsAsKzNVvg3qFEWsqxj4Y1WHMYbWd4GXAfi16DixF9r1QXKPLkSNSqGSr93g5XJ97Sqznv3PMmNiE6bRbhfSsxcVc4M9Ms18BrzmiiU6ojQ2icTsfdkrF8m5twcqvJegViRRiKef25E3D8oJ2qE1bM7NLCViMj8zBx2sC1zZC5BsdaXy1kcAZK3ULy5Ne8LnrYq74w7oTc8npPemDyUfjBF1CL17v2QGvmaor5oYqHFMtdxAbaz8HwM"
 	myBucket      = "performance"
 	myObjectKey   = "foo/bar/baz"
-	myData        = "one fish two fish red fish blue fish"
+	myData        = `Hey, diddle, diddle,
+The cat and the fiddle,
+The cow jumped over the moon;
+The little dog laughed
+To see such sport,
+And the dish ran away with the spoon.`
 )
 
 // UploadAndDownloadData uploads the data to objectKey in
