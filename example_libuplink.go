@@ -25,10 +25,7 @@ And the dish ran away with the spoon.`
 
 // UploadAndDownloadData uploads the data to objectKey in
 // bucketName, using accessGrant.
-func UploadAndDownloadData(ctx context.Context,
-	accessGrant, bucketName, objectKey string,
-	data []byte) error {
-
+func UploadAndDownloadData(ctx context.Context, accessGrant, bucketName, objectKey string, data []byte) error {
 	// Parse the Access Grant.
 	access, err := uplink.ParseAccess(accessGrant)
 	if err != nil {
@@ -48,7 +45,7 @@ func UploadAndDownloadData(ctx context.Context,
 		return fmt.Errorf("could not ensure bucket: %v", err)
 	}
 
-	// Intitiate the upload of our Object to the specified bucket and key.
+	// Initiate the upload of our Object to the specified bucket and key.
 	upload, err := project.UploadObject(ctx, bucketName, objectKey, nil)
 	if err != nil {
 		return fmt.Errorf("could not initiate upload: %v", err)
@@ -90,8 +87,8 @@ func UploadAndDownloadData(ctx context.Context,
 }
 
 func main() {
-	err := UploadAndDownloadData(context.Background(),
-		myAccessGrant, myBucket, myObjectKey, []byte(myData))
+	ctx := context.Background()
+	err := UploadAndDownloadData(ctx, myAccessGrant, myBucket, myObjectKey, []byte(myData))
 	if err != nil {
 		log.Fatalln("error:", err)
 	}
